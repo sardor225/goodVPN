@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>goodVPN</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#080d18;
+color:white;
+}
+header{
+padding:25px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#55aaff;
+}
+main{
+max-width:430px;
+margin:35px auto;
+padding:25px;
+}
+.card{
+background:#151f32;
+padding:25px;
+border-radius:20px;
+text-align:center;
+}
+.status{
+color:#aaa;
+margin:20px;
+}
+button{
+width:150px;
+height:150px;
+border-radius:50%;
+border:5px solid #398cff;
+background:#1765d1;
+color:white;
+font-size:23px;
+font-weight:bold;
+}
+button:active{transform:scale(.96)}
+.info{
+margin-top:30px;
+color:#aab8ce;
+line-height:2;
+}
+</style>
+</head>
+<body>
+<header>goodVPN</header>
+<main>
+<div class="card">
+<h2>Защищённое соединение</h2>
+<div class="status" id="status">Не подключено</div>
+<button onclick="toggleVPN()" id="btn">CONNECT</button>
+<div class="info">
+<p>🌍 goodVPN Personal Edition</p>
+<p>Бесплатный VPN</p>
+<p>Premium — скоро</p>
+</div>
+</div>
+</main>
+<script>
+let connected=false;
+function toggleVPN(){
+connected=!connected;
+document.getElementById("status").textContent=
+connected?"Интерфейс включён":"Не подключено";
+document.getElementById("btn").textContent=
+connected?"ON":"CONNECT";
+}
+</script>
+</body>
+  </html>
+  
